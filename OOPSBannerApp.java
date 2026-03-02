@@ -1,21 +1,25 @@
 
+/**
+ * OOPS Banner App
+ * UC5: Inline array initialization using String.join()
+ */
+
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println(String.join(" ",
-                "**", "*", "**"));
+        // Inline array initialization
+        String[] lines = {
+                String.join(" ", "**", "*", "**"),
+                String.join(" ", "*", "   *", "   *"),
+                String.join(" ", "", "   *", "**"),
+                String.join(" ", "*", "   *", "   *"),
+                String.join(" ", "**", "*", "**")
+        };
 
-        System.out.println(String.join(" ",
-                "*", "   *", "   *"));
-
-        System.out.println(String.join(" ",
-                "", "   *", "**"));
-
-        System.out.println(String.join(" ",
-                "*", "   *", "   *"));
-
-        System.out.println(String.join(" ",
-                "**", "*", "**"));
+        // Enhanced for loop
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
