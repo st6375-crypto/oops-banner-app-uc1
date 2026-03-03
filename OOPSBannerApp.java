@@ -1,17 +1,39 @@
 
 public class OOPSBannerApp {
+
+    // Inner class
+    static class CharacterPatternWrapper {
+        private char character;
+        private String[] pattern;
+
+        public CharacterPatternWrapper(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
+        }
+
+        public String[] getPattern() {
+            return pattern;
+        }
+    }
+
+    // Pattern for O
+    public static String[] getOPattern() {
+        return new String[]{
+                " ***** ",
+                " *   * ",
+                " *   * ",
+                " *   * ",
+                " ***** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        String line1 = "*****  *****  *****  *****";
-        String line2 = "*   *  *   *  *   *  *     ";
-        String line3 = "*****  *****  *****  *****";
-        String line4 = "*   *  *      *      *   *";
-        String line5 = "*****  *      *      *****";
+        CharacterPatternWrapper letterO =
+                new CharacterPatternWrapper('O', getOPattern());
 
-        System.out.println(line1);
-        System.out.println(line2);
-        System.out.println(line3);
-        System.out.println(line4);
-        System.out.println(line5);
+        for (String line : letterO.getPattern()) {
+            System.out.println(line);
+        }
     }
 }
